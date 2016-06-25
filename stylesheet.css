@@ -1,20 +1,32 @@
 
+body {
+  margin: 0px;
+}
 header {
   text-align: center;
-  background: url('http://www.wallpaperhive.net/resize.php?id=1361');
-  background-size: cover;
+  background-color: #71757A;
   color: white;
 }
 a {
-  color: red;
+  color: #253040;
+}
+.nav-link {
+  color: gray;
 }
 h1 {
   font-size: 70px;
 }
-img {
+h2 {
+  color: #404245;
+}
+p {
+  color: #55585C;
+}
+img.header-image {
   margin: 40px 0px 0px 0px;
   border: 7px solid #472400;
   border-radius: 20px;
+  width: 300px;
 }
 ul {
   padding: 10px;
@@ -23,6 +35,9 @@ ul {
 li {
   display: inline;
   padding: 0px 10px 0px 10px;
+}
+.active {
+  color: #AFB5BD;
 }
 article {
       max-width: 500px;
