@@ -1,6 +1,7 @@
 
 body {
   margin: 0px;
+  color: #55585C;
 }
 header {
   text-align: center;
@@ -18,9 +19,6 @@ h1 {
 }
 h2 {
   color: #404245;
-}
-p {
-  color: #55585C;
 }
 img.header-image {
   margin: 40px 0px 0px 0px;
@@ -54,4 +52,10 @@ article {
         padding: 5px;
 
     }
+}
+.sql-table {
+   max-width: 300px;
+}
+.sql-table2 {
+   max-width: 200px;
 }

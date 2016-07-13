@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <title>SQL</title>
+  <link href="./stylesheet.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="./favicon.png">
+</head>
+<body>
+  <header>
+    <img class="header-image" src="http://i.imgur.com/iC2ctc1.jpg?1">
+    <h1> Michelle Kirby</h1>
+      <ul>
+       <li><a class="nav-link" href="index.html">About</a></li>
+       <li><a class="nav-link" href="WebpageResumeExperience.html">Related Experience</a></li>
+       <li><a class="active" href="Projects.html">SQL</a></li>
+       <li><a class="nav-link" href="WebpageResumeOtherItems.html">Other Interests</a></li>
+      </ul>
+  </header>
+  <article>
+  	 <h2>SQL</h2>
+   	 <p> <strong>Sample Queries</strong>:With the help of SQL, database queries can be created to discover useful information regarding valuable company metrics.</p>
+   	 <p>Hypothetical: The below information has been retrieved from a valet parking application, Duxe Valet. Duxe experienced an increased number of customer complaints on July 1, 2016. To respond to the customer complaints, Duxe would like to know which valet was assigned to each customer reservation. They would also like to know how many reservations each valet completed.</p>
+   	 <p>To begin, we will need to see what type of information is available in the database by reviewing the table.</p>
+   	 <p>SELECT * FROM table;</p>
+
+     <img class="sql-table" src="./Images/table1.png">
+
+     <p>1. What are the names of each valet was assigned to each customer?</p> 
+     <p>SELECT customer.name AS customer_name, valet.name AS valet_name
+     <br>FROM table AS customer
+     <br>JOIN table AS valet 
+     <br>ON customer.valet_id = valet.user_id
+     <br>WHERE customer.valet_id > 0; 
+     </p>
+
+     <img class="sql-table2" src="./Images/table2.png">
+
+     <p>2. How many customers did each valet serve on July 1, 2016?</p>
+     <p>SELECT valet.name AS valet_name, COUNT (customer.User_ID) AS reservations_completed, res_date
+     <br>FROM table AS customer
+     <br>WHERE customer.user_id>0, customer.res_date >= '2016-07-01' AND customer.res_date  < '2016-07-02'
+     <br>JOIN table AS valet 
+     <br>ON customer.valet_id = valet.user_id
+     <br>GROUP BY reservations_completed, valet_name
+     </p>
+
+     <img class="sql-table" src="./Images/table3.png">
