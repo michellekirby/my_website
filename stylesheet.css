@@ -53,10 +53,9 @@ article {
 
     }
 }
+img.sql-table {
+   max-width: 300px;
 }
-.sql-table {
-   max-width: 200px;
-}
-.sql-table2 {
+img.sql-table2 {
    max-width: 200px;
 }
