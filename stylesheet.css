@@ -15,16 +15,16 @@ a {
   color: gray;
 }
 h1 {
-  font-size: 70px;
+  font-size: 50px;
 }
 h2 {
   color: #404245;
 }
 img.header-image {
   margin: 40px 0px 0px 0px;
-  border: 7px solid #472400;
-  border-radius: 20px;
-  width: 300px;
+  border: 3px solid gray;
+  border-radius: 100px;
+  width: 200px;
 }
 ul {
   padding: 10px;
@@ -53,8 +53,9 @@ article {
 
     }
 }
+}
 .sql-table {
-   max-width: 300px;
+   max-width: 200px;
 }
 .sql-table2 {
    max-width: 200px;
