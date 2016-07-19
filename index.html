@@ -1,35 +1,66 @@
 <!DOCTYPE html>
 <head>
-   <title>About</title>
-   <link href="./stylesheet.css" rel="stylesheet">
-   <link rel="shortcut icon" type="image/png" href="./favicon.png">
+  <title>Projects</title>
+  <link href="./stylesheet.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png">
 </head>
 <body>
   <header>
     <img class="header-image" src="http://i.imgur.com/KgZpWql.jpg?1">
-    <h1>Michelle Kirby</h1>
-    <ul>
-      <li><a class="nav-link" href="WebpageResumeExperience.html">Projects</a></li>
-      <li><a class="active" href="index.html">About</a></li>
-      <li><a class="nav-link" href="WebpageResumeOtherItems.html">Other Interests</a></li>
-    </ul>
+    <h1> Michelle Kirby</h1>
+      <ul>
+       <li><a class="active" href="index.html">Projects</a></li>
+       <li><a class="nav-link" href="WebpageResumeExperience.html">About</a></li>
+       <li><a class="nav-link" href="WebpageResumeOtherItems.html">Other Interests</a></li>
+      </ul>
   </header>
   <article>
-    <h2>My Story</h2>
-    <p> I am passionate about driving innovative, customer-centric, revenue producing products, and helping others. My background is in product development, customer success, consumer insight research, and operations. I am self-motivated, results driven, and I thrive in a fast-paced environment.
-    </p>
-    <p>I take pride in owning and producing quality work as my work is a reflection of who I am. I enjoy being part of a team, and I am happy to accept help, guidance, and instruction from others. I am also a strong leader and not afraid to step up to the plate and take initiative when needed. I believe open and respectful communication is essential to the well-being of every successful company. 
+    <h2>SQL</h2>
+    <p> <strong>Sample Queries</strong>:With the help of SQL, database queries can be created to discover useful information regarding valuable company metrics.</p>
+    <p>Hypothetical: The below information has been retrieved from a valet parking application, Duxe Valet. Duxe experienced an increased number of customer complaints on July 1, 2016. To respond to the customer complaints, Duxe would like to know which valet was assigned to each customer reservation. They would also like to know how many reservations each valet completed.</p>
+    <p>To begin, we will need to see what type of information is available in the database by reviewing the table.</p>
+    <p>SELECT * FROM table;</p>
+
+    <img class="sql-table" src="./Images/table1.png">
+
+    <p>1. What are the names of each valet was assigned to each customer?</p> 
+    <p>SELECT customer.name AS customer_name, valet.name AS valet_name
+    <br>FROM table AS customer
+    <br>JOIN table AS valet 
+    <br>ON customer.valet_id = valet.user_id
+    <br>WHERE customer.valet_id > 0; 
     </p>
 
-    <h2>Contact Information </h2>
-    <p>Phone Number: 805-503-0041</p>
-    <p>Email: michellekirby326@gmail.com</P>
-    <p>Twitter: 
-      <a href="https://twitter.com/Miche11eKirby">@Miche11eKirby</a>
+    <img class="sql-table2" src="./Images/table2.png">
+
+    <p>2. How many customers did each valet serve on July 1, 2016?</p>
+    <p>SELECT valet.name AS valet_name, COUNT (customer.User_ID) AS reservations_completed, res_date
+    <br>FROM table AS customer
+    <br>WHERE customer.user_id>0, customer.res_date >= '2016-07-01' AND customer.res_date  < '2016-07-02'
+    <br>JOIN table AS valet 
+    <br>ON customer.valet_id = valet.user_id
+    <br>GROUP BY reservations_completed, valet_name
     </p>
-    <p>LinkedIn:
-      <a href= "https://www.linkedin.com/in/michelledkirby">Profile</a>
-    </p>
+
+    <img class="sql-table" src="./Images/table3.png">
+
+    <h2>Technical Projects & Software</h2>
+    <p> <strong>Customer Issue Tracking System with JIRA</strong>: Work directly with CTO and Engineering team at Luxe to create a systematic workflow in JIRA to track customer issues. Integrate JIRA with company CRM, Desk.com for Salesforce.</p>
+    <p> <strong>Custom CRM with Desk.com for Salesforce</strong>: Track and manage all customer inquiries at Luxe through Desk. Create rules to manage inbox and productivity. Run reports to track efficiency metrics. Create labels to log and report customer issues.</p>
+    <p> <strong>Snake Game with Ruby on Rails</strong>: Introduction to Ruby on Rails. Run programs from computer's command line to develop a Rails application. Use Sublime Text and terminal to learn about programming in Ruby. Create web application, Snake.</p>
+    <p><strong>Personal Website & Luxe Company Knowledge Base with HTML & CSS</strong>: Use Sublime Text and Terminal to implement HTML and CSS. Create, design, maintain my personal website and Luxe company knowledge base.</p>
+    <p> <strong>Client Profiles with LawLogics</strong>: Track all client correspondences and document all updates to each client case. Calendar events, set reminders, and run reports to manage case list and meet deadlines.</p>
+    <p><strong>Other Apps</strong>: Advanced skills in Outlook and Microsoft Suite, Google Apps, and iPhone and Android apps.</p>
+    
+    <h2>Groups</h2>
+    <p><strong>Meetup</strong>: Product Management, Products That Count, Lean Startup Product, Customer Succcess.</p>
+    <p><strong>Bridge Troll</strong>: Ruby on Rails, HTML, CSS.</p>
+
+    <h2>Courses</h2> 
+    <p><strong>Coursera: University of Alberta</strong>: Client Needs and Software Requirements, Introduction to Software Product Management, Software Processes and Agile Practices, Agile Planning for Software Products.</p>
+    <p><strong>Udemy</strong>: The Complete SQL Bootcamp</p>
+
+
+
   </article>
 </body>
-
